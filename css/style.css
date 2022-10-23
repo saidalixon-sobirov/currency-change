@@ -48,6 +48,7 @@ th {
 table {
   width: 100%;
   text-align: left;
+  overflow-x: scroll;
 }
 
 .container {
@@ -233,5 +234,13 @@ form {
   tr td:first-child,
   tr th:first-child {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .table-box {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
   }
 }
