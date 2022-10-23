@@ -216,14 +216,14 @@ form {
 
 @media only screen and (max-width: 1000px) {
   .wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .table-box,
   .exchange-box {
     width: 100%;
   }
   .table-box {
-    margin-bottom: 50px;
+    margin-top: 50px;
     padding: 20px;
   }
 }
