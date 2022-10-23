@@ -224,6 +224,10 @@ form {
 }
 
 @media only screen and (max-width: 672px) {
+  .container {
+    width: 90%;
+  }
+  
   th,
   td,
   tr,
@@ -238,9 +242,13 @@ form {
 }
 
 @media only screen and (max-width: 530px) {
-  .table-box {
+  table {
     display: block;
     overflow-x: scroll;
     white-space: nowrap;
+    overflow-y: hidden;
+  }
+  .table-box {
+    overflow: hidden;
   }
 }
