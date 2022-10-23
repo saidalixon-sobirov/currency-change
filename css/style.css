@@ -240,10 +240,7 @@ form {
     padding: 10px;
   }
 
-  tr td:first-child,
-  tr th:first-child {
-    display: none;
-  }
+  
 }
 
 @media only screen and (max-width: 530px) {
