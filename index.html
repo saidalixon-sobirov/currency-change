@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurs valyuta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Курсы валют</h1>
+
+      <div class="wrapper">
+        <div class="table-box">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>НАИМЕНОВАНИЕ ВАЛЮТЫ</th>
+                <th>ПОКУПКА</th>
+                <th>ПРОДАЖА</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <img
+                    src="https://nbu.uz/local/templates/nbu/images/flags/USD.png"
+                    alt="USD"
+                  />
+                  <span class="currency-name">1 Доллар США , USD</span>
+                </td>
+
+                <td>
+                  <span class="nbu_buy_price">11120.00</span>
+                </td>
+
+                <td>
+                  <span class="nbu_cell_price">11180.00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <img
+                    src="https://nbu.uz/local/templates/nbu/images/flags/USD.png"
+                    alt="USD"
+                  />
+                  <span class="currency-name">1 Доллар США , USD</span>
+                </td>
+
+                <td>
+                  <span class="nbu_buy_price">11120.00</span>
+                </td>
+
+                <td>
+                  <span class="nbu_cell_price">11180.00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <img
+                    src="https://nbu.uz/local/templates/nbu/images/flags/USD.png"
+                    alt="USD"
+                  />
+                  <span class="currency-name">1 Доллар США , USD</span>
+                </td>
+
+                <td>
+                  <span class="nbu_buy_price">11120.00</span>
+                </td>
+
+                <td>
+                  <span class="nbu_cell_price">11180.00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <img
+                    src="https://nbu.uz/local/templates/nbu/images/flags/USD.png"
+                    alt="USD"
+                  />
+                  <span class="currency-name">1 Доллар США , USD</span>
+                </td>
+
+                <td>
+                  <span class="nbu_buy_price">11120.00</span>
+                </td>
+
+                <td>
+                  <span class="nbu_cell_price">11180.00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <img
+                    src="https://nbu.uz/local/templates/nbu/images/flags/USD.png"
+                    alt="USD"
+                  />
+                  <span class="currency-name">1 Доллар США , USD</span>
+                </td>
+
+                <td>
+                  <span class="nbu_buy_price">11120.00</span>
+                </td>
+
+                <td>
+                  <span class="nbu_cell_price">11180.00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <img
+                    src="https://nbu.uz/local/templates/nbu/images/flags/UAH.png"
+                    alt="USD"
+                  />
+                  <span class="currency-name">1 Доллар США , USD</span>
+                </td>
+
+                <td>
+                  <span class="nbu_buy_price">11120.00</span>
+                </td>
+
+                <td>
+                  <span class="nbu_cell_price">11180.00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <img
+                    src="https://nbu.uz/local/templates/nbu/images/flags/USD.png"
+                    alt="USD"
+                  />
+                  <span class="currency-name">1 Доллар США , USD</span>
+                </td>
+
+                <td>
+                  <span class="nbu_buy_price">11120.00</span>
+                </td>
+
+                <td>
+                  <span class="nbu_cell_price">11180.00</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="exchange-box">
+          <div class="exchanges-title">
+            <h2 class="exchange-title">Конвертер валют</h2>
+            <img
+              src="https://nbu.uz/local/templates/nbu/img/cours.svg"
+              alt="icon"
+              class="exchange-icon"
+            />
+          </div>
+
+          <form>
+            <input type="number" placeholder="1" id="enter-num">
+
+            <div class="selected-currency-box">
+              <span id="selected-currency">USD</span>
+              <i class="fa-sharp fa-solid fa-chevron-down"></i>
+
+              <ul class="select-currency">
+              
+                <li>USD</li>
+                <li>USD</li>
+                <li>USD</li>
+                <li>USD</li>
+                <li>USD</li>
+                <li>USD</li>
+                <li>USD</li>
+                <li>USD</li>
+                <li>USD</li>
+              </ul>
+            </div>
+            
+          </form>
+
+         <div class="result-currency-box">
+          <input type="text" value="0.00" disabled id="result-currency">
+          <span>UZS</span>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    <h1></h1>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
