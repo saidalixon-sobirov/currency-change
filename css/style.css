@@ -191,6 +191,19 @@ form {
   color: #fff;
 }
 
+.footer {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
 @media only screen and (max-width: 1475px) {
   #enter-num {
     width: 80%;

@@ -31,15 +31,19 @@ function createMenu(item) {
   li.classList.add("items");
   li.innerHTML += `${item}`;
   ul.appendChild(li);
-
   activeCurrencySelected();
+
 }
+
+
 
 function activeCurrencySelected() {
   ul.addEventListener("click", (e) => {
     if (e.target.classList.contains("items")) {
       activeCurrency.innerHTML = e.target.textContent;
     }
+
+
   });
 }
 
@@ -82,3 +86,4 @@ function createTable(data) {
 
   tableBody.append(tableRow);
 }
+
