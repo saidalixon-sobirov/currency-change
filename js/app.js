@@ -4,6 +4,7 @@
 const dropdown = document.querySelector(".selected-currency-box");
 const ul = document.querySelector(".select-currency");
 const activeCurrency = document.getElementById("selected-currency");
+const refreshData = document.querySelector(".data");
 
 const tableBody = document.querySelector("tbody");
 // API
@@ -49,6 +50,7 @@ async function getData() {
   const res = await request.json();
 
   res.map((item) => {
+    refreshData.innerHTML = `<i>( ${item.date} )</i>`;
     createTable(item);
   });
 }
