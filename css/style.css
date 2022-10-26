@@ -59,7 +59,11 @@ table {
 
 .title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+h2.title {
+  font-size: 18px;
 }
 
 .wrapper {
@@ -197,7 +201,7 @@ form {
 }
 
 .data {
-  font-size: 16px;
+  font-size: 21px;
 }
 
 .footer a {

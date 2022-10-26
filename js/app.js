@@ -1,17 +1,35 @@
 "use strict";
 
-// dropdown
 const dropdown = document.querySelector(".selected-currency-box");
 const ul = document.querySelector(".select-currency");
 const activeCurrency = document.getElementById("selected-currency");
 const refreshData = document.querySelector(".data");
-
 const tableBody = document.querySelector("tbody");
+const inputData = document.querySelector("#enter-num");
+const resultData = document.querySelector("#result-currency");
+
 // API
 const API = "https://nbu.uz/exchange-rates/json";
 
-dropdown.addEventListener("click", (e) => {
-  e.preventDefault();
+// calc currency
+    
+getActiveCurrency()
+
+async function getActiveCurrency() {
+  const req = await fetch(API);
+  const result = await req.json();
+  result.forEach((item) => {
+    if (item.code == activeCurrency.innerHTML) {
+      console.log(item.cb_price);
+      getActiveCurrency();
+      inputData.addEventListener("input", (e) => {
+        resultData.value = (e.target.value * item.cb_price).toFixed(2);
+      });
+    }
+  });
+}
+
+dropdown.addEventListener("click", () => {
   ul.classList.toggle("active");
 });
 
@@ -32,18 +50,16 @@ function createMenu(item) {
   li.innerHTML += `${item}`;
   ul.appendChild(li);
   activeCurrencySelected();
-
 }
-
-
 
 function activeCurrencySelected() {
   ul.addEventListener("click", (e) => {
+
     if (e.target.classList.contains("items")) {
       activeCurrency.innerHTML = e.target.textContent;
+      inputData.value = "";
+      resultData.value = "";
     }
-
-
   });
 }
 
@@ -54,7 +70,7 @@ async function getData() {
   const res = await request.json();
 
   res.map((item) => {
-    refreshData.innerHTML = `<i>( ${item.date} )</i>`;
+    refreshData.innerHTML = `Ma'lumotlar <span style="color: red"> <i>( ${item.date} )</i></span> xolati bo'yicha nbu.uz saytidan olinmoqda.`;
     createTable(item);
   });
 }
@@ -86,4 +102,3 @@ function createTable(data) {
 
   tableBody.append(tableRow);
 }
-
